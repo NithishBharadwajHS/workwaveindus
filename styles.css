@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+
+/* Choice Container */
+.choice-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.choice {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choice:hover {
+  transform: scale(1.05);
+}
+
+.choice h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.choice p {
+  margin: 10px 0 0;
+  color: #666;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea, form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Job List Styles */
+#jobList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#jobList li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#jobList li h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#jobList li p {
+  margin: 5px 0;
+}
+
+#jobList li img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}

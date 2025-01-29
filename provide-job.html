@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provide a Job</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Provide a Job</h1>
+      <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+      </nav>
+    </header>
+
+    <main>
+      <form id="jobForm">
+        <input type="text" id="jobTitle" placeholder="Job Title" required>
+        <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+        <input type="number" id="jobPrice" placeholder="Price" required>
+        <input type="file" id="jobImage" accept="image/*">
+        <button type="submit">Post Job</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

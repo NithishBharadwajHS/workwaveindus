@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Work</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Job Marquee Section -->
+  <div style="overflow:hidden; white-space:nowrap; width:100%; background-color:#f8f9fa; padding:10px;">
+    <marquee behavior="scroll" direction="left" scrollamount="5" style="font-size:18px; font-family:sans-serif; color:#333;">
+      <span><i class="fas fa-user-tie"></i> Event Staff &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-camera"></i> Wedding Photographer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-music"></i> Live Musician &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-briefcase"></i> Event Assistant &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-paint-brush"></i> Face Painter &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-truck"></i> Furniture Mover &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-box"></i> Package Courier &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-trash"></i> Junk Removal &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-car"></i> Rideshare Driver &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-bicycle"></i> Bicycle Messenger &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-hard-hat"></i> Day Laborer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-seedling"></i> Garden Worker &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-paint-roller"></i> House Painter &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-tint"></i> Window Washer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-snowflake"></i> Snow Shoveler &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-utensils"></i> Catering Staff &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-bed"></i> Hotel Housekeeping &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-broom"></i> Restaurant Dishwasher &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-hamburger"></i> Food Vendor &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-user-friends"></i> Temp Waiter &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-search"></i> Mystery Shopper &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-bullhorn"></i> Brand Promoter &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-store"></i> Retail Worker &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-handshake"></i> Trade Assistant &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-home"></i> House Cleaner &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-car"></i> Car Detailer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-building"></i> Office Cleaner &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-water"></i> Pressure Washer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-dog"></i> Dog Walker &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-cat"></i> Pet Sitter &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-tractor"></i> Farm Worker &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-camera-retro"></i> Event Photographer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-microphone"></i> Street Performer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-pencil-ruler"></i> Graphic Designer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-file-alt"></i> Resume Writer &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-globe"></i> Website Tester &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-keyboard"></i> Data Entry &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-user-secret"></i> Virtual Assistant &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-pen-nib"></i> Content Creator &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-couch"></i> Furniture Assembler &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-running"></i> Errand Runner &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-map-marked-alt"></i> Tour Guide &nbsp; | &nbsp;</span>
+      <span><i class="fas fa-shopping-bag"></i> Personal Shopper  
+    </marquee>
+  </div>
+
+  <!-- Job Posting Form -->
+  <div class="container">
+    <header>
+      <h1>Extend a Job Offer</h1>
+      <nav>
+        <button onclick="window.location.href='index.html'">Home</button>
+      </nav>
+    </header>
+
+    <main>
+      <form id="jobForm">
+        <input type="text" id="jobTitle" placeholder="Job Title" required>
+        <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+        <input type="number" id="jobPrice" placeholder="Price" required>
+        <input type="file" id="jobImage" accept="image/*" onchange="previewImage(event)">
+
+        <!-- Image Preview -->
+        <div id="imagePreview" style="display:none; margin-top:10px;">
+          <img id="preview" src="" alt="Image Preview" style="max-width: 100px; border-radius: 5px;">
+        </div>
+
+        <button type="submit">Post Job</button>
+      </form>
+
+      <p id="successMessage" style="display:none; color:green; margin-top:10px;">Job posted successfully!</p>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('jobForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let title = document.getElementById('jobTitle').value.trim();
+      let description = document.getElementById('jobDescription').value.trim();
+      let price = document.getElementById('jobPrice').value.trim();
+
+      if (title === '' || description === '' || price === '') {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      document.getElementById('successMessage').style.display = 'block';
+
+      setTimeout(() => {
+        document.getElementById('jobForm').reset();
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('imagePreview').style.display = 'none';
+      }, 2000);
+    });
+
+    function previewImage(event) {
+      const preview = document.getElementById('preview');
+      const imagePreview = document.getElementById('imagePreview');
+
+      preview.src = URL.createObjectURL(event.target.files[0]);
+      imagePreview.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

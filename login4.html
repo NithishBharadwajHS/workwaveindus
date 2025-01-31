@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #0f0063, #000000);
+        }
+
+        .container {
+            display: flex;
+            width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 700px;
+        }
+
+        .left, .right {
+            padding: 20px;
+            width: 50%;
+        }
+
+        .left {
+            background: #fff;
+        }
+
+        .right {
+            background: #4a2dbb;
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background: white;
+            color: #4a2dbb;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>General Information</h2>
+            <label>Title</label>
+            <select>
+                <option>Mr.</option>
+                <option>Ms.</option>
+                <option>Dr.</option>
+            </select>
+
+            <label>First Name</label>
+            <input type="text">
+
+            <label>Last Name</label>
+            <input type="text">
+
+            <label>Position</label>
+            <input type="text">
+
+            <label>Company</label>
+            <input type="text">
+
+            <label>Business Arena</label>
+            <input type="text">
+
+            <label>Employees</label>
+            <input type="number">
+        </div>
+        
+        <div class="right">
+            <h2>Contact Details</h2>
+            <label>Street + Nr</label>
+            <input type="text">
+
+            <label>Additional Information</label>
+            <input type="text">
+
+            <label>Zip Code</label>
+            <input type="text">
+
+            <label>Place</label>
+            <input type="text">
+
+            <label>Country</label>
+            <select>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>UK</option>
+            </select>
+
+            <label>Phone Code + Number</label>
+            <input type="text">
+            
+            <label>Your Email</label>
+            <input type="email">
+
+            <div class="checkbox-container">
+                <input type="checkbox">
+                <label>I accept the <a href="#" style="color: white; text-decoration: underline;">Terms and Conditions</a></label>
+            </div>
+
+            <button class="btn">Register Badge</button>
+        </div>
+    </div>
+</body>
+</html>
